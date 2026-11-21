@@ -1,0 +1,1891 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   MAIN BIRTHDAY CONTAINER
+========================= */
+
+.birthday-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #fff0f4,
+    #ffe0e9,
+    #ffd1df,
+    #fff0f4
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+
+  color: #754052;
+}
+
+/* =========================
+   WELCOME SCREEN
+========================= */
+
+.welcome-content {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.sparkle-icon {
+  color: #d66b91;
+  margin-bottom: 20px;
+}
+
+.small-heading {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #a65c77;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  font-weight: 500;
+  line-height: 1.25;
+  color: #80465d;
+}
+
+h1 span {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+  color: #d65d89;
+  font-weight: 400;
+}
+
+.welcome-message {
+  font-size: 15px;
+  line-height: 2;
+  color: #986477;
+  margin-top: 20px;
+}
+
+.heart-decoration {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+   SURPRISE BUTTON
+========================= */
+
+.surprise-button {
+  background: linear-gradient(
+    135deg,
+    #e98bab,
+    #d85d86
+  );
+
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 40px;
+
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  box-shadow: 0 8px 25px rgba(203, 91, 132, 0.3);
+  transition: 0.3s ease;
+}
+
+.surprise-button:hover {
+  box-shadow: 0 10px 30px rgba(203, 91, 132, 0.45);
+}
+
+.opening-message {
+  margin-top: 25px;
+  color: #c34d79;
+  font-size: 14px;
+}
+
+/* =========================
+   BOTTOM MESSAGE
+========================= */
+
+.bottom-message {
+  position: relative;
+  margin: 20px 0;
+  text-align: center;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #ad7188;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart {
+  position: absolute;
+  color: rgba(211, 91, 135, 0.35);
+  font-size: 65px;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.heart-one {
+  top: 12%;
+  left: 12%;
+}
+
+.heart-two {
+  top: 20%;
+  right: 13%;
+  animation-delay: 1s;
+}
+
+.heart-three {
+  top: 75%;
+  left: 18%;
+  animation-delay: 2s;
+}
+
+.heart-four {
+  top: 78%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(15deg);
+  }
+}
+
+/* =========================
+   LOVE LETTER OVERLAY
+========================= */
+
+.letter-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+
+  background: rgba(91, 43, 63, 0.48);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.close-letter {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
+  background: white;
+  border: none;
+  border-radius: 50%;
+
+  width: 42px;
+  height: 42px;
+
+  color: #bd547b;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+  z-index: 5;
+}
+
+/* =========================
+   ENVELOPE DESIGN
+========================= */
+
+.envelope-scene {
+  text-align: center;
+  color: #82465e;
+}
+
+.envelope-scene h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  margin: 15px 0 8px;
+  color: #d65d89;
+}
+
+.envelope-scene p {
+  font-size: 13px;
+  color: #9e647a;
+}
+
+.envelope {
+  width: 260px;
+  height: 175px;
+
+  position: relative;
+  margin: 45px auto 25px;
+
+  cursor: pointer;
+
+  filter: drop-shadow(
+    0 15px 18px rgba(116, 47, 73, 0.2)
+  );
+}
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background: #e99bb5;
+  border-radius: 5px;
+}
+
+.envelope-paper {
+  position: absolute;
+  width: 88%;
+  height: 85%;
+
+  background: #fffaf5;
+
+  left: 6%;
+  top: -8%;
+
+  border-radius: 4px;
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 0;
+
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-top: 105px solid #f5b6ca;
+
+  transform-origin: top;
+  z-index: 2;
+}
+
+.envelope-heart {
+  position: absolute;
+  top: 65px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  color: white;
+  font-size: 35px;
+
+  text-shadow: 0 2px 5px rgba(180, 70, 110, 0.3);
+}
+
+.tap-message {
+  margin-top: 20px;
+}
+
+/* =========================
+   LOVE LETTER CARD
+========================= */
+
+.love-letter {
+  width: min(100%, 480px);
+  max-height: 85vh;
+  overflow-y: auto;
+
+  background: #fffaf5;
+
+  border: 5px double #efb2c5;
+  border-radius: 12px;
+
+  padding: 35px;
+
+  text-align: center;
+  color: #805066;
+
+  box-shadow: 0 20px 60px rgba(80, 25, 50, 0.25);
+}
+
+.letter-top-heart {
+  font-size: 45px;
+  color: #df7799;
+  margin-bottom: 10px;
+}
+
+.letter-subtitle {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #bd7790;
+  margin-bottom: 15px;
+}
+
+.love-letter h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #d65d89;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.letter-content {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  line-height: 2;
+  text-align: left;
+}
+
+.letter-signature {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #d65d89;
+  line-height: 1.5;
+  margin: 25px 0;
+}
+
+/* =========================
+   OUR STORY SECTION
+========================= */
+
+.our-story {
+  width: 100%;
+  padding: 90px 20px;
+
+  background: linear-gradient(
+    180deg,
+    #fff0f4,
+    #ffe1eb,
+    #fff5f7
+  );
+
+  color: #80465d;
+  overflow: hidden;
+}
+
+.story-heading {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.story-subtitle {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #b56b85;
+  margin: 18px 0;
+}
+
+.story-heading h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+}
+
+.story-heading h2 span {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+  color: #d65d89;
+}
+
+.story-intro {
+  font-size: 13px;
+  color: #9c6a7e;
+  margin-top: 15px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+
+  position: absolute;
+
+  width: 3px;
+  background: #e9a4ba;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: 50%;
+  position: relative;
+  padding: 20px 45px;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Timeline hearts */
+
+.timeline-heart {
+  position: absolute;
+  top: 35px;
+
+  width: 40px;
+  height: 40px;
+
+  background: #fff8fa;
+  border: 2px solid #e9a4ba;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  z-index: 2;
+}
+
+.timeline-item.left .timeline-heart {
+  right: -20px;
+}
+
+.timeline-item.right .timeline-heart {
+  left: -20px;
+}
+
+/* Memory cards */
+
+.memory-card {
+  background: rgba(255, 255, 255, 0.8);
+
+  padding: 25px;
+
+  border: 1px solid #f4c4d3;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(179, 90, 125, 0.1);
+
+  transition: transform 0.3s ease;
+}
+
+.memory-card:hover {
+  transform: translateY(-6px);
+}
+
+.memory-emoji {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.memory-date {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #d16d91;
+  text-transform: uppercase;
+}
+
+.memory-card h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  color: #c75e84;
+  margin: 10px 0;
+}
+
+.memory-description {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #916477;
+}
+
+/* Story ending */
+
+.story-ending {
+  text-align: center;
+  margin-top: 75px;
+}
+
+.story-ending h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #d65d89;
+  margin: 15px 0;
+}
+
+.story-ending p {
+  font-size: 13px;
+  color: #986477;
+}
+
+/* =========================
+   TABLET AND MOBILE DESIGN
+========================= */
+
+@media (max-width: 650px) {
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item,
+  .timeline-item.right,
+  .timeline-item.left {
+    width: 100%;
+    left: 0;
+
+    padding: 15px 10px 15px 50px;
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-heart,
+  .timeline-item.right .timeline-heart {
+    left: -5px;
+    right: auto;
+  }
+
+  .story-heading {
+    margin-bottom: 50px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .small-heading {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .welcome-message {
+    font-size: 13px;
+  }
+
+  .floating-heart {
+    font-size: 40px;
+  }
+
+  .surprise-button {
+    padding: 14px 24px;
+  }
+
+  .love-letter {
+    padding: 25px 20px;
+  }
+
+  .envelope {
+    transform: scale(0.85);
+  }
+
+  .love-letter h2 {
+    font-size: 40px;
+  }
+
+  .letter-content {
+    font-size: 12px;
+  }
+
+}
+
+/* =========================
+   PHOTO MEMORIES GALLERY
+========================= */
+
+.gallery-section {
+  width: 100%;
+  padding: 90px 25px;
+  background: linear-gradient(
+    180deg,
+    #fff5f8,
+    #ffe4ed,
+    #fff0f5
+  );
+  text-align: center;
+  color: #80465d;
+}
+
+.gallery-heading {
+  margin-bottom: 65px;
+}
+
+.gallery-subtitle {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #b56b85;
+  margin: 18px 0;
+}
+
+.gallery-heading h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.gallery-heading h2 span {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+  color: #d65d89;
+}
+
+.gallery-intro {
+  font-size: 13px;
+  line-height: 2;
+  color: #986477;
+  max-width: 550px;
+  margin: auto;
+}
+
+/* PHOTO GRID */
+
+.photo-gallery {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px 35px;
+  align-items: center;
+}
+
+/* POLAROID FRAME */
+
+.polaroid {
+  background: #fffdfd;
+  padding: 13px 13px 20px;
+  border-radius: 5px;
+
+  box-shadow: 0 10px 30px rgba(170, 78, 112, 0.15);
+
+  transform: rotate(-2deg);
+  transition: box-shadow 0.3s ease;
+}
+
+.polaroid:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.polaroid:hover {
+  box-shadow: 0 18px 35px rgba(170, 78, 112, 0.25);
+  z-index: 2;
+}
+
+/* PHOTO */
+
+.photo-frame {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: #f9dce6;
+  border-radius: 3px;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.polaroid:hover .photo-frame img {
+  transform: scale(1.08);
+}
+
+/* PHOTO CAPTION */
+
+.photo-caption {
+  padding: 18px 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+}
+
+.photo-caption h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+  font-weight: 400;
+  color: #c75e84;
+}
+
+.photo-caption p {
+  font-size: 10px;
+  color: #a8798b;
+  letter-spacing: 1px;
+}
+
+/* GALLERY ENDING */
+
+.gallery-ending {
+  margin-top: 75px;
+}
+
+.gallery-ending h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #d65d89;
+  margin: 15px 0;
+}
+
+.gallery-ending p {
+  font-size: 13px;
+  color: #986477;
+  line-height: 2;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 800px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+
+  .photo-frame {
+    height: 230px;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery-section {
+    padding: 65px 18px;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+  }
+
+  .photo-frame {
+    height: 300px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 45px;
+  }
+}
+
+/* =========================
+   BIRTHDAY CAKE SECTION
+========================= */
+
+.cake-section {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #fff0f5,
+    #ffe0eb,
+    #fff5f8
+  );
+  color: #80465d;
+}
+
+.cake-heading {
+  margin-bottom: 65px;
+}
+
+.cake-subtitle {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #d65d89;
+}
+
+.cake-heading h2 {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+.cake-heading h2 span {
+  font-family: 'Great Vibes', cursive;
+  color: #d65d89;
+  font-size: 1.5em;
+}
+
+.cake-heading p:last-child {
+  font-size: 14px;
+  color: #a8798b;
+}
+
+/* CAKE */
+
+.cake-container {
+  position: relative;
+  width: 300px;
+  height: 310px;
+  margin: 0 auto 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* CANDLES */
+
+.candles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  top: 15px;
+  z-index: 5;
+}
+
+.candle {
+  position: relative;
+  width: 13px;
+  height: 65px;
+}
+
+.candle-body {
+  width: 13px;
+  height: 65px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff 0px,
+    #fff 5px,
+    #ed91ad 5px,
+    #ed91ad 10px
+  );
+}
+
+.flame {
+  position: absolute;
+  width: 15px;
+  height: 22px;
+  top: -25px;
+  left: -1px;
+  border-radius: 50% 50% 40% 40%;
+  background: #ffb347;
+  box-shadow: 0 0 15px #ffb347;
+}
+
+/* CAKE TOP */
+
+.cake-top {
+  position: absolute;
+  top: 75px;
+  width: 190px;
+  height: 35px;
+  border-radius: 50%;
+  background: #fff0f5;
+  border: 3px solid #ed9bb6;
+  z-index: 3;
+}
+
+.cake-top span {
+  color: #e8799b;
+  font-size: 23px;
+}
+
+/* CAKE LAYERS */
+
+.cake-layer {
+  position: absolute;
+  border-radius: 12px 12px 20px 20px;
+  background: linear-gradient(
+    90deg,
+    #e99ab5,
+    #ffc5d8,
+    #e99ab5
+  );
+  box-shadow: 0 5px 10px rgba(180, 80, 120, 0.15);
+}
+
+.cake-layer-one {
+  top: 100px;
+  width: 185px;
+  height: 65px;
+  z-index: 2;
+}
+
+.cake-layer-two {
+  top: 165px;
+  width: 235px;
+  height: 65px;
+}
+
+.cake-base {
+  position: absolute;
+  bottom: 15px;
+  width: 260px;
+  height: 65px;
+  border-radius: 12px 12px 20px 20px;
+  background: linear-gradient(
+    90deg,
+    #e68ca9,
+    #ffc6d9,
+    #e68ca9
+  );
+}
+
+.cake-plate {
+  position: absolute;
+  bottom: 0;
+  width: 290px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(180, 80, 120, 0.2);
+}
+
+/* BUTTON */
+
+.blow-button {
+  border: none;
+  padding: 16px 35px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #ed8caf, #d95786);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(214, 93, 137, 0.25);
+}
+
+/* BIRTHDAY WISH */
+
+.birthday-wish {
+  max-width: 500px;
+  margin: 35px auto 0;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 10px 30px rgba(180, 80, 120, 0.12);
+}
+
+.birthday-wish h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #d65d89;
+  margin: 18px 0;
+}
+
+.birthday-wish p {
+  color: #986477;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.wish-ending {
+  margin-top: 15px;
+}
+
+@media (max-width: 500px) {
+  .cake-heading h2 {
+    font-size: 32px;
+  }
+}
+
+/* =========================
+   MY SUPERLADY DECORATIVE CAKE
+========================= */
+
+.fancy-cake {
+  height: 360px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* CAKE TOP DECORATIONS */
+
+.fancy-top {
+  overflow: visible;
+  background: #fff8fa;
+  border: 3px solid #f3a1bd;
+  box-shadow: 0 0 15px rgba(230, 120, 160, 0.2);
+}
+
+.fancy-top span {
+  position: absolute;
+}
+
+.fancy-top span:first-child {
+  top: 5px;
+  left: 46%;
+}
+
+.top-flower {
+  top: -22px;
+  left: 15px;
+  font-size: 23px;
+}
+
+.second-flower {
+  left: auto;
+  right: 15px;
+}
+
+.top-strawberry {
+  top: -17px;
+  left: 55px;
+  font-size: 22px;
+}
+
+.second-berry {
+  left: auto;
+  right: 55px;
+}
+
+/* DECORATIVE CREAM LAYERS */
+
+.fancy-layer {
+  background: linear-gradient(
+    90deg,
+    #e990b0,
+    #ffc7da,
+    #f5a9c3
+  );
+  overflow: visible;
+}
+
+.cream-drips {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cream-drips span {
+  width: 17px;
+  height: 23px;
+  background: #fff6fa;
+  border-radius: 0 0 50% 50%;
+}
+
+.cake-flower {
+  position: absolute;
+  right: 18px;
+  top: 28px;
+  font-size: 23px;
+}
+
+.cake-heart-decoration {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff5fa;
+  font-size: 23px;
+  letter-spacing: 8px;
+}
+
+.cake-side-flower {
+  position: absolute;
+  right: 15px;
+  top: 28px;
+  font-size: 22px;
+}
+
+/* BOTTOM TIER */
+
+.fancy-base {
+  background: linear-gradient(
+    90deg,
+    #e88dab,
+    #ffc1d5,
+    #e88dab
+  );
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base-cream {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 13px;
+  background: #fff5fa;
+  border-radius: 50%;
+}
+
+.superlady-text {
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  padding: 8px 4px;
+  border-top: 1px solid rgba(255,255,255,0.65);
+  border-bottom: 1px solid rgba(255,255,255,0.65);
+  color: #fff;
+  font-family: 'Great Vibes', cursive;
+  font-size: 29px;
+  text-shadow: 1px 2px 4px rgba(150, 50, 90, 0.3);
+}
+
+.cake-pearls {
+  position: absolute;
+  bottom: 9px;
+  display: flex;
+  gap: 35px;
+  color: #fff8fa;
+  font-size: 20px;
+}
+
+.fancy-plate {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #e8799b;
+  font-size: 13px;
+}
+
+/* CONFETTI */
+
+.confetti-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  height: 350px;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: 0;
+  width: 9px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+/* FLOATING HEARTS */
+
+.cake-celebration-hearts {
+  position: relative;
+  height: 0;
+  pointer-events: none;
+}
+
+.cake-celebration-hearts span {
+  position: absolute;
+  left: 50%;
+  top: -200px;
+  font-size: 25px;
+}
+
+/* WISH CARD */
+
+.birthday-wish {
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 500px) {
+  .fancy-cake {
+    transform: scale(0.9);
+    transform-origin: center bottom;
+    margin-bottom: 20px;
+  }
+
+  .superlady-text {
+    font-size: 25px;
+  }
+}
+
+/* =========================
+   VIDEO MEMORIES SECTION
+========================= */
+
+.video-section {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #fff0f5,
+    #ffd9e6,
+    #fff0f5
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.video-heading {
+  margin-bottom: 45px;
+}
+
+.video-subtitle {
+  color: #d65d89;
+  letter-spacing: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.video-heading h2 {
+  font-size: 48px;
+  color: #80445e;
+  margin: 15px 0;
+}
+
+.video-heading h2 span {
+  color: #e8799b;
+  font-family: 'Great Vibes', cursive;
+  font-size: 65px;
+}
+
+.video-heading > p:last-child {
+  color: #a66b82;
+  font-size: 15px;
+}
+
+.video-card {
+  max-width: 850px;
+  margin: auto;
+  padding: 18px;
+  background: rgba(255,255,255,0.85);
+  border: 2px solid #ffd0df;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(180,80,120,0.15);
+}
+
+.video-frame {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #2b1720;
+  line-height: 0;
+}
+
+.video-frame video {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  display: block;
+}
+
+.video-caption {
+  padding: 25px 10px 15px;
+}
+
+.video-caption h3 {
+  color: #d65d89;
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+  margin: 12px 0;
+}
+
+.video-caption p {
+  color: #95677b;
+  font-size: 15px;
+}
+
+.video-footer {
+  margin-top: 30px;
+  color: #b36e89;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+  .video-heading h2 {
+    font-size: 34px;
+  }
+
+  .video-heading h2 span {
+    font-size: 48px;
+  }
+
+  .video-section {
+    padding: 65px 15px;
+  }
+
+  .video-card {
+    padding: 10px;
+  }
+}
+
+/* FINAL LOVE LEVEL INFINITY SURPRISE */
+
+.final-surprise {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, #ffe0eb, transparent 50%),
+    linear-gradient(135deg, #fff0f5, #fbd1e0, #fff5f8);
+}
+
+.final-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  width: 100%;
+}
+
+.final-subtitle {
+  color: #bd557d;
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.final-sparkle {
+  color: #d96d98;
+  margin-bottom: 10px;
+}
+
+.final-heading {
+  color: #a83f6b;
+  font-size: clamp(32px, 6vw, 55px);
+  letter-spacing: 7px;
+  margin: 10px 0;
+}
+
+.infinity-text {
+  color: #df6394;
+  font-size: clamp(45px, 9vw, 85px);
+  margin: 5px 0 35px;
+  text-shadow: 0 5px 25px #f3a4c2;
+}
+
+.final-photo-frame {
+  width: min(85%, 390px);
+  margin: 0 auto;
+  padding: 12px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 45px rgba(178, 74, 116, 0.22);
+  position: relative;
+  transform: rotate(-2deg);
+}
+
+.final-photo-frame img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+}
+
+.photo-heart {
+  position: absolute;
+  bottom: -20px;
+  right: -15px;
+  background: white;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px #e9a2bd;
+}
+
+.final-couple-text {
+  color: #b74776;
+  font-size: 30px;
+  margin-top: 55px;
+}
+
+.final-message {
+  color: #805064;
+  font-size: 17px;
+  line-height: 1.9;
+  max-width: 520px;
+  margin: 20px auto;
+}
+
+.final-heart {
+  font-size: 45px;
+  margin: 25px 0;
+}
+
+.final-birthday-wish {
+  color: #c34d7d;
+  font-size: clamp(30px, 6vw, 48px);
+  line-height: 1.5;
+  margin: 15px 0;
+}
+
+.final-forever {
+  color: #a94d73;
+  font-size: 20px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.final-floating-heart {
+  position: absolute;
+  color: #e58bab;
+  font-size: 65px;
+  opacity: 0.35;
+  animation: finalFloat 5s ease-in-out infinite;
+}
+
+.heart-a {
+  top: 12%;
+  left: 8%;
+}
+
+.heart-b {
+  top: 25%;
+  right: 9%;
+  animation-delay: 1s;
+}
+
+.heart-c {
+  bottom: 15%;
+  left: 12%;
+  animation-delay: 2s;
+}
+
+.heart-d {
+  bottom: 12%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+@keyframes finalFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(15deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .final-surprise {
+    padding: 75px 15px;
+  }
+
+  .final-photo-frame img {
+    height: 340px;
+  }
+
+  .final-message {
+    font-size: 15px;
+  }
+
+  .final-couple-text {
+    font-size: 25px;
+  }
+}
+
+.letter-content {
+  max-height: 75vh;
+  overflow-y: auto;
+  padding: 20px;
+  line-height: 1.9;
+  scroll-behavior: smooth;
+}
+
+.letter-content p {
+  margin: 18px 0;
+  text-align: center;
+}
+
+.letter-content h2 {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.letter-content h3 {
+  text-align: center;
+}
+
+/* =========================================
+   RESTORED ORIGINAL BIRTHDAY WELCOME PAGE
+========================================= */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: #754052;
+}
+
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(
+    135deg,
+    #fff0f4,
+    #ffe0e9,
+    #ffd1df,
+    #fff0f4
+  );
+  overflow: hidden;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-heart {
+  margin-bottom: 22px;
+}
+
+.hero-subtitle {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #a65c77;
+  margin-bottom: 25px;
+}
+
+.hero-content h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: #80465d;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+  display: inline-block;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #d65d89;
+  margin-left: 8px;
+}
+
+.hero-description {
+  max-width: 650px;
+  font-size: 15px;
+  line-height: 2;
+  color: #986477;
+  margin-bottom: 28px;
+}
+
+.open-surprise-button {
+  background: linear-gradient(
+    135deg,
+    #e98bab,
+    #d85d86
+  );
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 8px 25px rgba(203, 91, 132, 0.3);
+  transition: 0.3s ease;
+}
+
+.open-surprise-button:hover {
+  box-shadow: 0 12px 30px rgba(203, 91, 132, 0.45);
+}
+
+.welcome-message {
+  margin-top: 25px;
+  color: #c34d79;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.hero-hearts {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.hero-hearts span {
+  display: inline-block;
+  font-size: 25px;
+  animation: heroHeartFloat 2.5s ease-in-out infinite;
+}
+
+.hero-hearts span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.hero-hearts span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes heroHeartFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.hero-footer {
+  margin-top: 30px;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #ad7188;
+}
+
+/* FLOATING HEARTS */
+
+.floating-heart {
+  position: absolute;
+  color: rgba(211, 91, 135, 0.25);
+  font-size: 75px;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.heart-one {
+  top: 12%;
+  left: 12%;
+}
+
+.heart-two {
+  top: 20%;
+  right: 13%;
+  animation-delay: 1s;
+}
+
+.heart-three {
+  top: 75%;
+  left: 18%;
+  animation-delay: 2s;
+}
+
+.heart-four {
+  top: 78%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(15deg);
+  }
+}
+
+/* LOVE LETTER SECTION */
+
+.letter-section {
+  width: 100%;
+  padding: 75px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    180deg,
+    #fff5f8,
+    #ffe4ed,
+    #fff0f5
+  );
+}
+
+.letter-card {
+  width: 100%;
+  max-width: 750px;
+  position: relative;
+  padding: 45px 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #f4c4d3;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(179, 90, 125, 0.12);
+}
+
+.letter-envelope h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  color: #80465d;
+  margin: 20px 0 12px;
+}
+
+.letter-envelope p {
+  font-size: 14px;
+  line-height: 2;
+  color: #986477;
+  margin-bottom: 20px;
+}
+
+.letter-open-button {
+  background: linear-gradient(
+    135deg,
+    #e98bab,
+    #d85d86
+  );
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(203, 91, 132, 0.25);
+  transition: 0.3s ease;
+}
+
+.letter-open-button:hover {
+  transform: translateY(-3px);
+}
+
+.letter-content {
+  position: relative;
+  max-height: 75vh;
+  overflow-y: auto;
+  padding: 25px;
+  line-height: 1.9;
+  scroll-behavior: smooth;
+}
+
+.letter-close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: #ffe5ed;
+  color: #bd547b;
+  cursor: pointer;
+}
+
+.letter-content h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 35px;
+  color: #d65d89;
+  margin: 20px 0;
+}
+
+.letter-content h3 {
+  color: #c75e84;
+  margin: 12px 0;
+}
+
+.letter-content p {
+  font-size: 14px;
+  color: #805066;
+  margin: 18px 0;
+  text-align: center;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 100vh;
+    padding: 40px 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content h1 span {
+    display: block;
+    font-size: 1.5em;
+    margin: 5px 0;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .open-surprise-button {
+    padding: 14px 24px;
+    font-size: 13px;
+  }
+
+  .letter-section {
+    padding: 50px 15px;
+  }
+
+  .letter-card {
+    padding: 30px 18px;
+  }
+
+  .letter-content {
+    padding: 25px 8px;
+  }
+
+  .floating-heart {
+    font-size: 40px;
+  }
+}
